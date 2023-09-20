@@ -1,0 +1,38 @@
+/* CSS Reset Básico */
+
+/* Redefinir margens e preenchimentos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Redefinir estilo da lista */
+ul, ol {
+  list-style: none;
+}
+
+/* Redefinir estilo de links não visitados */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Adicione mais redefinições de estilo aqui conforme necessário */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
