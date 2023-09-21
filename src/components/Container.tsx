@@ -1,24 +1,45 @@
 import React from "react";
 import "./Container.css";
 import Bio from "./Bio/Bio";
-
+import NavBar from "./NavBar";
+import Apps from "./Apps/Apps";
+import { TbBrandVscode } from "react-icons/tb";
+import { SiNotion, SiYoutubemusic } from "react-icons/si";
+import { IoFolderOpenSharp } from "react-icons/io5";
 class Container extends React.Component {
-  currentDateTime: Date = new Date();
+  incons = {
+    vscode: <TbBrandVscode color="#007ACC" className="appImageIcon" />,
+    youtubeMusic: <SiYoutubemusic color="red" className="appImageIcon" />,
+    notion: <SiNotion color="#000" className="appImageIcon" />,
+    files: <IoFolderOpenSharp color="#007ACC" className="appImageIcon" />,
+  };
 
   render(): React.ReactNode {
-    const formattedDateTime = this.currentDateTime.toLocaleString(); // Converter Date em string
-
     return (
       <div className="container boxShadow border">
-        <div className="osNavbar">
-          <div className="osName">@SROCHA.OS</div>
-          <div className="osInfo flex-1">
-            CONFIG 2023 *** {formattedDateTime} ***
-          </div>
-          <div className="osGeo">02:39PM (GMT-3) | @ BRA</div>
-        </div>
-        <div className="osBody flex">
+        <NavBar />
+        <div className="osBody flex wrap">
           <Bio />
+          <Apps
+            name="Visual Studio Code"
+            icon={() => (
+              <TbBrandVscode color="#007ACC" className="appImageIcon" />
+            )}
+          />
+          <Apps
+            name="Youtube Music"
+            icon={() => <SiYoutubemusic color="red" className="appImageIcon" />}
+          />
+          <Apps
+            name="Notion"
+            icon={() => <SiNotion color="#000" className="appImageIcon" />}
+          />
+          <Apps
+            name="Files"
+            icon={() => (
+              <IoFolderOpenSharp color="#007ACC" className="appImageIcon" />
+            )}
+          />
         </div>
       </div>
     );
