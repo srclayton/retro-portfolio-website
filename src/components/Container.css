@@ -19,3 +19,12 @@
 .osBodyRight{
     justify-content: center;
 }
+
+.tagName{
+    position: fixed;
+    font-weight: bold;
+    bottom:1em;
+    right:6em;
+    padding: 0.5em 0.8em;
+    background-color: #fff;
+}

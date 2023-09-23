@@ -29,7 +29,7 @@ function Container() {
     <div className="container boxShadow border">
       <NavBar />
       <div className="osBody flex flex-column flex-1 wrap">
-        <div className="osBodyTop flex flex-1">
+        <div className="osBodyTop flex">
           <div className="osBodyLeft flex wrap">
             <Bio />
           </div>
@@ -39,7 +39,7 @@ function Container() {
             ))}
           </div>
         </div>
-        <div className="osBodyBottom flex">
+        <div className="osBodyBottom flex flex-1">
           <div className="osBodyLeft flex wrap">
             {icons.map((icon) => (
               <Apps key={icon.name} name={icon.name} icon={() => icon.icon} />
@@ -48,6 +48,7 @@ function Container() {
           <div className="osBodyRight flex flex-1 wrap"></div>
         </div>
       </div>
+      <div className="tagName border boxShadow">CLAYTON</div>
     </div>
   );
 }
