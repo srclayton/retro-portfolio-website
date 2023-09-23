@@ -1,4 +1,7 @@
 .container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     width: 90vw; 
     height: 90vh; 
     margin: 5vh 5vw;
@@ -8,3 +11,11 @@
 .bioContainerBKP, .bioContainer {
     margin: 0.5em 0.8em;
 } 
+
+.osBodyTop,.osBodyBottom{
+    overflow: hidden;
+}
+
+.osBodyRight{
+    justify-content: center;
+}
