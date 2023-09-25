@@ -5,6 +5,7 @@ import Apps from "./Apps/Apps";
 import { TbBrandVscode } from "react-icons/tb";
 import { SiNotion, SiYoutubemusic } from "react-icons/si";
 import { IoFolderOpenSharp } from "react-icons/io5";
+import Development from "./Development/Development";
 function Container() {
   const icons = [
     {
@@ -28,9 +29,9 @@ function Container() {
   return (
     <div className="container boxShadow border">
       <NavBar />
-      <div className="osBody flex flex-column flex-1 wrap">
-        <div className="osBodyTop flex">
-          <div className="osBodyLeft flex wrap">
+      <div className="osBody flex flex-column wrap">
+        <div className="osBodyTop flex wrap">
+          <div className="osBodyLeft">
             <Bio />
           </div>
           <div className="osBodyRight flex flex-1 wrap">
@@ -49,6 +50,7 @@ function Container() {
         </div>
       </div>
       <div className="tagName border boxShadow">CLAYTON</div>
+      <Development />
     </div>
   );
 }

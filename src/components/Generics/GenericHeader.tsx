@@ -1,12 +1,13 @@
 import "./GenericHeader.css";
-import { FiUser } from "react-icons/fi";
+import { IconType } from "react-icons";
 
 interface IGenericHeader {
   title: string;
+  icon: IconType;
 }
 
 function GenericHeader(props: IGenericHeader) {
-  const { title } = props;
+  const { title, icon: Icon } = props;
   return (
     <div className="bioHeader flex gap-2">
       <div className="flex gap-1">
@@ -15,7 +16,7 @@ function GenericHeader(props: IGenericHeader) {
         <div className="bioHeaderIcon"></div>
       </div>
       <div className="bioHeaderTitle flex-1">{title}</div>
-      <FiUser className="bioHeaderIcons" color={"#ffffff"} />
+      <Icon className="bioHeaderIcons" color={"#ffffff"} />
     </div>
   );
 }

@@ -15,7 +15,7 @@
 
 .osBodyTop,.osBodyBottom{
     overflow: hidden;
-    height: 50vh;
+    /* height: 50vh; */
 }
 
 .osBodyRight{
@@ -31,3 +31,4 @@
     padding: 0.5em 0.8em;
     background-color: #fff;
 }
+
