@@ -7,9 +7,9 @@ function BioHero() {
         <div className="bioHeroBlackBox flex center">
           <div className="bioHeroWhiteBox flex center">
             <img
+              className="bioHeroImage"
               src="https://github.com/srclayton.png"
               alt="user_image"
-              width={168}
             />
           </div>
         </div>

@@ -10,11 +10,11 @@ function Apps(props: IAppsProps) {
   const { name, icon: Icon } = props;
 
   return (
-    <div className="appContainer flex center gap-1">
+    <div className="appContainer flex center">
       <div className="appImage flex center">
         <Icon />
       </div>
-      <div className="appName flex center">{name}</div>
+      <div className="appName">{name}</div>
     </div>
   );
 }

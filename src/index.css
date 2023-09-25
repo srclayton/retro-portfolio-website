@@ -6,7 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 24px;
+  font-size: 1.3vw;
 }
 
 /* Redefinir estilo da lista */
@@ -46,7 +46,7 @@ code {
   src: url(./fonts/IBMPlexMono-Light.ttf);
 }
 .boxShadow {
-  box-shadow: 15px 15px 1px rgba(0, 0, 0, 100);
+  box-shadow: 1.5vh 1.5vh 0px rgba(10, 10, 10, 1);
 }
 
 .flex-1{

@@ -5,7 +5,7 @@ import { BsGithub } from "react-icons/bs";
 function BioFooter() {
   return (
     <div className="bioFooter flex center gap-3">
-      <div className="flex gap-1">
+      <div className="flex center gap-1">
         <BiLogoLinkedin />
         <a
           href="https://linkedin.com/in/srclayton"
@@ -15,7 +15,7 @@ function BioFooter() {
           @srclayton ↗
         </a>
       </div>
-      <div className="flex gap-1">
+      <div className="flex center gap-1">
         <BsGithub />
         <a
           className="bioSocialText"

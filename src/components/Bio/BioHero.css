@@ -3,20 +3,20 @@
 }
 
 .bioHeroBlackBox{
-    width: 256px;
-    height: 256px;
+    width: 13vw;
+    height: 13vw;
     background-color: #000;
 }
 
 .bioHeroWhiteBox{
-    width: 216px;
-    height: 216px;
+    width: 11vw;
+    height: 11vw;
     background-color: #fff;
 }
 
 .bioHeroImage{
-    width: 168px;
-    height: 168px;
+    width: 9vw;
+    height: 9vw;
 }
 
 

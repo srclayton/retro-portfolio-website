@@ -1,8 +1,11 @@
 .appContainer{
-    margin: 1em;
-    width: 135px;
-    height: 184px;
+    margin: 1vh;
+    width: 12vh; 
+    /* 125 */
+    height: 15vh;
+    /* 184 */
     flex-direction: column;
+    font-size: 2vh;   
 }
 .appContainer:hover{
     background-color: rgba(0,0,0,0.2);
@@ -10,9 +13,9 @@
     border-radius: 5px;
 }
 .appImage{
-    width: 120px;
-    height: 120px;
-    border-radius: 25px;
+    width: 11vh;
+    height: 11vh;
+    border-radius: 10px;
     border: 0.2em solid #000000;
     background-color: #FFFFFF;
     margin: 0.1em 0.5em;

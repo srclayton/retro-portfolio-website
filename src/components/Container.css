@@ -10,15 +10,18 @@
 }
 .bioContainerBKP, .bioContainer {
     margin: 0.5em 0.8em;
+    width: 50vw;
 } 
 
 .osBodyTop,.osBodyBottom{
     overflow: hidden;
+    height: 50vh;
 }
 
 .osBodyRight{
     justify-content: center;
 }
+
 
 .tagName{
     position: fixed;

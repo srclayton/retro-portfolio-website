@@ -15,7 +15,7 @@ function GenericHeader(props: IGenericHeader) {
         <div className="bioHeaderIcon"></div>
       </div>
       <div className="bioHeaderTitle flex-1">{title}</div>
-      <FiUser color={"#ffffff"} />
+      <FiUser className="bioHeaderIcons" color={"#ffffff"} />
     </div>
   );
 }
