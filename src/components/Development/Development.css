@@ -1,0 +1,13 @@
+.devBody{
+    padding: 1em;
+    width: 100%;
+}
+.devContainer{
+    user-select: none;
+    position: fixed;
+    bottom: 2vh;
+    left: 8vw;
+    width: 30vw;
+    height: 8vw;
+    background-color: #E5E5E5;
+}
