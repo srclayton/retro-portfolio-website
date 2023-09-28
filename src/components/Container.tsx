@@ -6,6 +6,7 @@ import { TbBrandVscode } from "react-icons/tb";
 import { SiNotion, SiYoutubemusic } from "react-icons/si";
 import { IoFolderOpenSharp } from "react-icons/io5";
 import Development from "./Development/Development";
+import Email from "./Email/Email";
 function Container() {
   const icons = [
     {
@@ -46,7 +47,9 @@ function Container() {
               <Apps key={icon.name} name={icon.name} icon={() => icon.icon} />
             ))}
           </div>
-          <div className="osBodyRight flex flex-1 wrap"></div>
+          <div className="osBodyRight flex flex-1 wrap">
+            <Email />
+          </div>
         </div>
       </div>
       <div className="tagName border boxShadow">CLAYTON</div>
