@@ -4,13 +4,16 @@ import { IconType } from "react-icons";
 interface IAppsProps {
   name: string;
   icon: IconType;
+  onClick?: () => void;
 }
 
 function Apps(props: IAppsProps) {
-  const { name, icon: Icon } = props;
-
+  const { name, icon: Icon, onClick } = props;
+  function handleIconClick() {
+    onClick?.();
+  }
   return (
-    <div className="appContainer flex center">
+    <div onClick={handleIconClick} className="appContainer flex center">
       <div className="appImage flex center">
         <Icon />
       </div>
