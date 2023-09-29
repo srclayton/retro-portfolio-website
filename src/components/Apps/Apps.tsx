@@ -9,10 +9,11 @@ interface IAppsProps {
   name: string;
   icon: IconType;
   hero: JSX.Element;
+  large?: boolean | undefined;
 }
 
 function Apps(props: IAppsProps) {
-  const { name, icon: Icon, hero } = props;
+  const { name, icon: Icon, hero, large } = props;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -31,7 +32,7 @@ function Apps(props: IAppsProps) {
         </div>
         <div className="appName">{name}</div>
       </div>
-      <Modal isOpen={isModalOpen}>
+      <Modal isOpen={isModalOpen} large={large}>
         <div className="border boxShadow">
           <GenericHeader
             title={name}

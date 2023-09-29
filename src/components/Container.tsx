@@ -11,12 +11,14 @@ import { AiFillMail } from "react-icons/ai";
 import Form from "./Email/Form";
 import Music from "./Music/Music";
 import { BsSpotify } from "react-icons/bs";
+import VsCode from "./VsCode/VsCode";
 function Container() {
   const icons = [
     {
       name: "Visual Studio Code",
       icon: <TbBrandVscode color="#007ACC" className="appImageIcon" />,
-      hero: <Error />,
+      hero: <VsCode />,
+      large: true,
     },
     {
       name: "Spotify",
@@ -62,6 +64,7 @@ function Container() {
                 name={icon.name}
                 icon={() => icon.icon}
                 hero={icon.hero}
+                large={icon.large}
               />
             ))}
           </div>

@@ -9,9 +9,9 @@ import Apps from "../Apps/Apps";
 function Email() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
+  // const openModal = () => {
+  //   setIsModalOpen(true);
+  // };
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -20,7 +20,8 @@ function Email() {
   return (
     <>
       <Apps
-        onClick={openModal}
+        // onClick={openModal}
+        hero={<Form />}
         icon={() => <AiFillMail color="#2c80b7" className="appImageIcon" />}
         name="Email"
       />
@@ -31,7 +32,7 @@ function Email() {
             onClose={closeModal}
             icon={AiOutlineCloseSquare}
           />
-          <Form />
+          <Form onClose={closeModal} />
         </div>
       </Modal>
     </>

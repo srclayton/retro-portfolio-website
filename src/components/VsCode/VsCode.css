@@ -1,0 +1,41 @@
+.vsContainer{
+    background-color: #1e1e3f;
+    color: white;
+    max-height: 80vh;
+}
+
+.vsContent{
+    color:white;
+    background-color: #2d2b55;
+    padding: 0.5vw;
+    overflow-y: auto;
+    width: 100%;
+    max-height: 70vh;
+}
+.windowBar{
+
+    font-family: 'IBM Plex Mono Light', monospace;
+    padding: 0.5vw;
+}
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem */
+    height: 8px; /* Altura da barra de rolagem na orientação vertical (opcional) */
+  }
+  
+  /* Estilo do trilho da barra de rolagem */
+  ::-webkit-scrollbar-track {
+    background: #ffffff00; /* Cor de fundo do trilho da barra de rolagem */
+  }
+  
+  /* Estilo do polegar (alça) da barra de rolagem */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Cor do polegar da barra de rolagem */
+    border-radius: 4px; /* Raio das bordas do polegar */
+  }
+  
+  /* Estilo do polegar quando houver hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor do polegar da barra de rolagem quando houver hover */
+  }
