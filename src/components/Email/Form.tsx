@@ -1,20 +1,27 @@
 import { FormEvent, useState } from "react";
 import "./Form.css";
 import Loading from "./Loading";
-function Form() {
+
+interface IForm {
+  onClose?: () => void;
+}
+
+function Form(props: IForm) {
+  const { onClose } = props;
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState<boolean | null>(null);
   function setStatesToFalse() {
     setLoading(false);
     setSuccess(false);
+    onClose?.();
   }
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
     const formData = new FormData(e.currentTarget);
     const mailGunFormData = new FormData();
-    const message = `Via sandbox.mgsend.net
-${formData.get("message")}}`;
+    const message = `Via sandbox.mgsend.net de ${formData.get("name")}
+${formData.get("message")}`;
     try {
       mailGunFormData.append("from", formData.get("email") as string);
       mailGunFormData.append("to", "clayton@srocha.io");
@@ -36,8 +43,6 @@ ${formData.get("message")}}`;
 
       if (response.ok) setSuccess(true);
       else setSuccess(false);
-
-      console.log("Mailgun response:", response);
     } catch (error) {
       setLoading(false);
       setSuccess(false);
@@ -50,7 +55,7 @@ ${formData.get("message")}}`;
     <form onSubmit={handleSubmit}>
       {loading && <Loading type={success} onClose={setStatesToFalse} />}
 
-      {/* <Loading type={success} setStatesToFalse={setStatesToFalse} /> */}
+      {/* <Loading type={success} onClose={setStatesToFalse} /> */}
 
       <div className="emailContainer">
         <div className="flex">

@@ -2,28 +2,41 @@ import "./Container.css";
 import Bio from "./Bio/Bio";
 import NavBar from "./NavBar";
 import Apps from "./Apps/Apps";
+import Error from "./Apps/Error";
 import { TbBrandVscode } from "react-icons/tb";
-import { SiNotion, SiYoutubemusic } from "react-icons/si";
+import { SiNotion } from "react-icons/si";
 import { IoFolderOpenSharp } from "react-icons/io5";
 import Development from "./Development/Development";
-import Email from "./Email/Email";
+import { AiFillMail } from "react-icons/ai";
+import Form from "./Email/Form";
+import Music from "./Music/Music";
+import { BsSpotify } from "react-icons/bs";
 function Container() {
   const icons = [
     {
       name: "Visual Studio Code",
       icon: <TbBrandVscode color="#007ACC" className="appImageIcon" />,
+      hero: <Error />,
     },
     {
-      name: "Youtube Music",
-      icon: <SiYoutubemusic color="red" className="appImageIcon" />,
+      name: "Spotify",
+      icon: <BsSpotify color="green" className="appImageIcon" />,
+      hero: <Music />,
     },
     {
       name: "Notion",
       icon: <SiNotion color="#000" className="appImageIcon" />,
+      hero: <Error />,
     },
     {
       name: "Files",
       icon: <IoFolderOpenSharp color="#007ACC" className="appImageIcon" />,
+      hero: <Error />,
+    },
+    {
+      name: "Email",
+      icon: <AiFillMail color="#2c80b7" className="appImageIcon" />,
+      hero: <Form />,
     },
   ];
 
@@ -36,19 +49,31 @@ function Container() {
             <Bio />
           </div>
           <div className="osBodyRight flex flex-1 wrap">
-            {icons.map((icon) => (
+            {/* {icons.map((icon) => (
               <Apps key={icon.name} name={icon.name} icon={() => icon.icon} />
-            ))}
+            ))} */}
           </div>
         </div>
         <div className="osBodyBottom flex flex-1">
           <div className="osBodyLeft flex wrap">
             {icons.map((icon) => (
-              <Apps key={icon.name} name={icon.name} icon={() => icon.icon} />
+              <Apps
+                key={icon.name}
+                name={icon.name}
+                icon={() => icon.icon}
+                hero={icon.hero}
+              />
             ))}
           </div>
           <div className="osBodyRight flex flex-1 wrap">
-            <Email />
+            {/* <Email /> */}
+            <Apps
+              icon={() => (
+                <AiFillMail color="#2c80b7" className="appImageIcon" />
+              )}
+              name="Email"
+              hero={<Form />}
+            />
           </div>
         </div>
       </div>

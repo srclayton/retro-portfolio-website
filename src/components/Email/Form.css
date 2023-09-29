@@ -1,3 +1,6 @@
+.emailFooter, .emailContainer{
+    padding: 2vw;
+}
 form > * > * > label {
     width: 10vw;
     text-align: right;

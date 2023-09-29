@@ -9,7 +9,7 @@ const Modal: React.FC<IModalProps> = ({ isOpen, children }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="modal-overlay">
+    <div className="modal-overlay modal-enter">
       <div className="modal">
         <div className="modal-content">{children}</div>
       </div>
