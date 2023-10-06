@@ -1,11 +1,13 @@
 import "./VsCode.css";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { dark } from "react-syntax-highlighter/dist/esm/styles/hljs";
-
-import { VscCode } from "react-icons/vsc";
+import { vs2015 } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 function VsCode() {
   const htmlCode = `
+import React from "react";
+import "./About.css";
+function About() {
+  return(
     <section id="about">
       <h1> Olá, me chamo Clayton</h1>
       <p>
@@ -58,6 +60,10 @@ function VsCode() {
         </li>
       </ul>
     </section>
+  );
+}
+
+export default About;
   `;
   const customStyle = {
     background: "none", // Remove o background
@@ -67,12 +73,12 @@ function VsCode() {
   return (
     <div className="vsContainer">
       <div className="windowBar flex center">
-        AboutMe.tsx - Portifólio - Visual Studio Code
+        About.tsx - Portifólio - Visual Studio Code
       </div>
       <div className="vsContent">
         <SyntaxHighlighter
           language="javascript"
-          style={dark}
+          style={vs2015}
           customStyle={customStyle}
           showLineNumbers={true}
           // wrapLines={true}

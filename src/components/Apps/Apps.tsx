@@ -32,7 +32,7 @@ function Apps(props: IAppsProps) {
         </div>
         <div className="appName">{name}</div>
       </div>
-      <Modal isOpen={isModalOpen} large={large}>
+      <Modal isOpen={isModalOpen} onClose={closeModal} large={large}>
         <div className="border boxShadow">
           <GenericHeader
             title={name}
