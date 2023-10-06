@@ -1,4 +1,3 @@
-import { AiOutlineCloseSquare } from "react-icons/ai";
 import GenericHeader from "../Generics/GenericHeader";
 import Modal from "../Modal/Modal";
 import "./Apps.css";
@@ -34,11 +33,7 @@ function Apps(props: IAppsProps) {
       </div>
       <Modal isOpen={isModalOpen} onClose={closeModal} large={large}>
         <div className="border boxShadow">
-          <GenericHeader
-            title={name}
-            onClose={closeModal}
-            icon={AiOutlineCloseSquare}
-          />
+          <GenericHeader title={name} onClose={closeModal} />
           {React.cloneElement(hero, { onClose: closeModal })}
         </div>
       </Modal>
