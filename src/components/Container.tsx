@@ -12,6 +12,7 @@ import Form from "./Email/Form";
 import Music from "./Music/Music";
 import { BsSpotify } from "react-icons/bs";
 import VsCode from "./VsCode/VsCode";
+import Projects from "./Projects/Projects";
 function Container() {
   const icons = [
     {
@@ -51,9 +52,7 @@ function Container() {
             <Bio />
           </div>
           <div className="osBodyRight flex flex-1 wrap">
-            {/* {icons.map((icon) => (
-              <Apps key={icon.name} name={icon.name} icon={() => icon.icon} />
-            ))} */}
+            <Projects />
           </div>
         </div>
         <div className="osBodyBottom flex flex-1">
@@ -68,16 +67,7 @@ function Container() {
               />
             ))}
           </div>
-          <div className="osBodyRight flex flex-1 wrap">
-            {/* <Email /> */}
-            <Apps
-              icon={() => (
-                <AiFillMail color="#2c80b7" className="appImageIcon" />
-              )}
-              name="Email"
-              hero={<Form />}
-            />
-          </div>
+          <div className="osBodyRight flex flex-1 wrap"></div>
         </div>
       </div>
       <div className="tagName border boxShadow">CLAYTON</div>
