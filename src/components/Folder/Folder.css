@@ -1,0 +1,10 @@
+.folder{
+    position:absolute;
+    bottom: 10vh;
+    width: 40vw;
+    padding: 1vw;
+}
+.folderBody{
+    background-color:#E5E5E5;
+    min-height: 35vh;
+}

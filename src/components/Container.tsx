@@ -12,7 +12,7 @@ import Form from "./Email/Form";
 import Music from "./Music/Music";
 import { BsSpotify } from "react-icons/bs";
 import VsCode from "./VsCode/VsCode";
-import Projects from "./Projects/Projects";
+import Folder from "./Folder/Folder";
 function Container() {
   const icons = [
     {
@@ -52,7 +52,7 @@ function Container() {
             <Bio />
           </div>
           <div className="osBodyRight flex flex-1 wrap">
-            <Projects />
+            {/* <Projects /> */}
           </div>
         </div>
         <div className="osBodyBottom flex flex-1">
@@ -67,7 +67,9 @@ function Container() {
               />
             ))}
           </div>
-          <div className="osBodyRight flex flex-1 wrap"></div>
+          <div className="osBodyRight flex flex-1 wrap">
+            <Folder />
+          </div>
         </div>
       </div>
       <div className="tagName border boxShadow">CLAYTON</div>

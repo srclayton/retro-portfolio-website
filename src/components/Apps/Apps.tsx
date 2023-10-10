@@ -9,10 +9,11 @@ interface IAppsProps {
   icon: IconType;
   hero: JSX.Element;
   large?: boolean | undefined;
+  isHref?: boolean | undefined;
 }
 
 function Apps(props: IAppsProps) {
-  const { name, icon: Icon, hero, large } = props;
+  const { name, icon: Icon, hero, large, isHref } = props;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -25,7 +26,10 @@ function Apps(props: IAppsProps) {
   };
   return (
     <>
-      <div onClick={openModal} className="appContainer flex center">
+      <div
+        onClick={isHref ? () => null : openModal}
+        className="appContainer flex center"
+      >
         <div className="appImage flex center">
           <Icon />
         </div>

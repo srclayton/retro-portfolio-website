@@ -1,14 +1,22 @@
 import "./Projects.css";
-import Apps from "../Apps/Apps";
-import Description from "./Description";
 import { TbApi } from "react-icons/tb";
 import { BiSolidBot } from "react-icons/bi";
-
-function Projects() {
-  const projectsCollection = [
+import FolderApps from "../Folder/FolderApps";
+import { ProjectProps } from "../Folder/Folder";
+import { FaGamepad, FaStore } from "react-icons/fa";
+import Apps from "../Apps/Apps";
+import { BsGithub } from "react-icons/bs";
+interface IProjectsProps {
+  setFolder: (folder: string) => void;
+  setState: () => void;
+  setProject: (project: ProjectProps) => void;
+}
+function Projects(props: IProjectsProps) {
+  const { setState, setFolder, setProject } = props;
+  const projectsCollection: ProjectProps[] = [
     {
       name: "Fake Data API",
-      icon: <TbApi className="appImageIcon" />,
+      icon: () => <TbApi className="appImageIcon" />,
       description: `A API de Dados Falsos é ideal para projetos que precisam de dados fictícios para testes, desenvolvimento, prototipagem ou qualquer cenário onde a utilização de informações reais não é desejável. 
       
       Ela permite que desenvolvedores obtenham acesso rápido a um conjunto diversificado de dados simulados, economizando tempo e recursos durante o desenvolvimento de diferentes aplicações.
@@ -23,7 +31,7 @@ function Projects() {
     },
     {
       name: "Rastreio de encomendas",
-      icon: <BiSolidBot className="appImageIcon" />,
+      icon: () => <BiSolidBot className="appImageIcon" />,
       description: `Neste projeto, criamos um bot no Telegram utilizando Python, Flask e python-telegram-bot. O propósito principal era permitir que os usuários rastreassem seus objetos postados nos Correios de forma simples e rápida.
       
       Para garantir a disponibilidade e desempenho, hospedamos o bot na Amazon Web Services (AWS) usando uma instância EC2.
@@ -36,25 +44,94 @@ function Projects() {
       urlTitle: "rastreio",
       url: "https://github.com/srclayton/rastreio",
     },
+    {
+      name: "Quack Fire",
+      icon: () => <FaGamepad className="appImageIcon" />,
+      description: `Quack-fire e um jogo de agilidade e concentracao, que exige dos jogadores um comprometimento com a atencao. 
+
+      Composto por tres fases, quack-fire e disputado por dois jogadores que tem como objetivo atingir o maior numero de patos dentro do cenario de cada fase. O jogo possui diferentes tipos de patos, sendo que cada especie possui uma pontuacao diferente e velocidades diferentes. Os jogadores podem jogar as tres fases disponiveis e, no final de cada uma delas, e possivel conferir o ranking para ver quem ganhou a fase. Todas as fases tem duracao de 65 segundos. 
+      
+      As pontuacoes que cada pato atingido oferece ao jogador sao divididas pela dificuldade em atingi-los. Alem de poder atingir os patos, os jogadores podem tambem atingir o menino que carrega um balao e que aparecera em um unico momento de cada fase. A diferenca e que, quando atingido, esse menino faz com que os jogadores percam pontos, igual ao pato do tipo fedido quando atingido. Alem disso, o menino nao desaparece quando atingido, possibilitando que os jogadores o acertem mais vezes durante a fase e, consequentemente, percam mais pontos. Para tornar o desafio ainda mais divertido, o tempo que os patos sao mostrados durante as fases varia tambem. Assim, conforme vamos avancando de fase, menor as probabilidades de aparecer um pato mais raro, pois seu tempo de aparicao e menor.`,
+      urlTitle: "quack-fire",
+      url: "https://github.com/srclayton/quack-fire",
+    },
+    {
+      name: "Jogo da memória",
+      icon: () => <FaGamepad className="appImageIcon" />,
+      description: `Jogo da memória é um jogo de cartas simples e divertido para todas as idades. O objetivo é combinar pares de cartas idênticas com o menor número de tentativas possível.`,
+      urlTitle: "jogo-da-memoria-2019",
+      url: "https://github.com/srclayton/jogo-da-memoria-2019",
+      urlProducao: "https://srclayton.github.io/jogo-da-memoria-2019/",
+    },
+    {
+      name: "Kimi Store",
+      icon: () => <FaStore className="appImageIcon" />,
+      description: `Kimi Store é um protótipo de loja virtual de moda e acessórios desenvolvido com tecnologias web, incluindo HTML, CSS, Materialize e JavaScript. Este projeto visa demonstrar uma interface responsiva e agradável aos usuários, permitindo que eles naveguem por uma seleção de produtos de moda. O uso de Materialize facilita a criação de um layout moderno e amigável.`,
+      urlTitle: "kimi-store",
+      url: "https://github.com/srclayton/kimi-store",
+      urlProducao: "https://srclayton.github.io/Kimi-Store/",
+    },
   ];
+
+  const handlerClick = (project: ProjectProps) => {
+    setProject(project);
+    setFolder(project.urlTitle);
+  };
   return (
     <>
       {projectsCollection.map((project) => (
-        <Apps
+        // <Apps
+        //   key={project.name}
+        //   name={project.name}
+        //   icon={
+        //     isFolder
+        //       ? () => (
+        //           <IoFolderOpenSharp color="#007ACC" className="appImageIcon" />
+        //         )
+        //       : () => project.icon
+        //   }
+        //   hero={
+        //     <Description
+        //       title={project.name}
+        //       text={project.description}
+        //       urlTitle={project.urlTitle}
+        //       url={project.url}
+        //       urlProducao={project.urlProducao ? project.urlProducao : null}
+        //     />
+        //   }
+        // />
+        <div
           key={project.name}
-          name={project.name}
-          icon={() => project.icon}
-          hero={
-            <Description
-              title={project.name}
-              text={project.description}
-              urlTitle={project.urlTitle}
-              url={project.url}
-              urlProducao={project.urlProducao ? project.urlProducao : null}
-            />
+          onClick={() =>
+            handlerClick({
+              name: project.name,
+              description: project.description,
+              urlTitle: project.urlTitle,
+              url: project.url,
+              urlProducao: project.urlProducao ? project.urlProducao : null,
+              icon: project.icon,
+            })
           }
-        />
+        >
+          <FolderApps
+            setState={setState}
+            name={project.name}
+            icon={project.icon}
+          />
+        </div>
       ))}
+      <a
+        href="https://github.com/srclayton"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Apps
+          name={"Todos os Projetos"}
+          icon={() => <BsGithub className="appImageIcon" />}
+          hero={<></>}
+          isHref={true}
+        />
+      </a>
     </>
   );
 }

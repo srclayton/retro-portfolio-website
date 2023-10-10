@@ -1,0 +1,37 @@
+.folderHeader{
+    background-color: black;
+    color: white;
+    height: 1.5em;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.5em 0.3em;
+
+}
+
+.folderHeaderIcon{
+    width: 14px;
+    height: 14px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.folderHeaderNav{
+    /* text-align: center; */
+    align-items: center;
+}
+
+.breadcrumbItem:before {
+    padding: 0.5em;
+    content: "/";
+}
+
+.breadcrumb{
+    width: 100%;
+    padding:0 1vw;
+    border-radius: 0.1em;
+    background-color: #1b1b1b77;
+    align-items: center;
+}
+.breadcrumbItem{
+    font-size: 0.6em;
+}
