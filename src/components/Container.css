@@ -1,16 +1,22 @@
 .container {
+    position: relative;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     width: 90vw; 
     height: 90vh; 
     margin: 5vh 5vw;
-    background-color: #FF6161;
+    /* https://10015.io/tools/css-background-pattern-generator */
+    background: radial-gradient(at bottom right, #efe8e8 0, #efe8e8 25px, rgba(239,232,232,0.2) 25px, rgba(239,232,232,0.2) 50px, rgba(239,232,232,0.75) 50px, rgba(239,232,232,0.75) 75px, rgba(239,232,232,0.25) 75px, rgba(239,232,232,0.25) 100px, rgba(239,232,232,0.3) 100px, rgba(239,232,232,0.3) 125px, rgba(239,232,232,0.75) 125px, rgba(239,232,232,0.75) 150px, rgba(239,232,232,0.2) 150px, rgba(239,232,232,0.2) 175px, transparent 175px, transparent 200px), radial-gradient(at top left, transparent 0, transparent 25px, rgba(239,232,232,0.2) 25px, rgba(239,232,232,0.2) 50px, rgba(239,232,232,0.75) 50px, rgba(239,232,232,0.75) 75px, rgba(239,232,232,0.3) 75px, rgba(239,232,232,0.3) 100px, rgba(239,232,232,0.25) 100px, rgba(239,232,232,0.25) 125px, rgba(239,232,232,0.75) 125px, rgba(239,232,232,0.75) 150px, rgba(239,232,232,0.2) 150px, rgba(239,232,232,0.2) 175px, #efe8e8 175px, #efe8e8 200px, transparent 200px, transparent 500px);
+      background-blend-mode: multiply;
+      background-size: 200px 200px, 200px 200px;
+      background-color: #b8d5d4;
+    /* background-color: #FF6161; */
     /* font-family: 'IBM Plex Mono', monospace; */
 }
 .bioContainerBKP, .bioContainer {
     margin: 0.5em 0.8em;
-    width: 50vw;
+    width: 48vw;
 } 
 
 .osBodyTop,.osBodyBottom{

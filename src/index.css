@@ -31,7 +31,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+html{
+  background-image: linear-gradient(#f8f8f8 10px, transparent 10px), linear-gradient(to right, #f8f8f8 10px, transparent 10px);
+  background-size: 100px 100px;
+  background-color: #ffffff;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
