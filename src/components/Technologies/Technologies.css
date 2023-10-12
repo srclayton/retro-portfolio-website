@@ -1,0 +1,11 @@
+.techContainer{
+    background-color: #E5E5E5;
+    min-height: 35vh;
+    align-items: center;
+    justify-content: center;
+}
+.technologies{
+    width: 38vw;
+    position: absolute;
+    top: 9vh;
+}
