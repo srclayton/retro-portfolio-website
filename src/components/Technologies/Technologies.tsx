@@ -57,11 +57,11 @@ function Technologies() {
     },
   ];
   return (
-    <div className="technologies border boxShadow">
+    <div className="technologies border boxShadow flex flex-column">
       <GenericHeader title="Tecnologias" icon={() => <BiCodeAlt />} />
-      <div className="techContainer flex wrap">
+      <div className="techContainer flex flex-1 wrap">
         {technologies.map((tech) => (
-          <div className="techIcon flex flex-column">
+          <div className="techIcon">
             <Apps
               hero={<></>}
               icon={() => tech.icon}

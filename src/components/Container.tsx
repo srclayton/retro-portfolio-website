@@ -59,13 +59,15 @@ function Container() {
         <div className="osBodyBottom flex flex-1">
           <div className="osBodyLeft flex wrap">
             {icons.map((icon) => (
-              <Apps
-                key={icon.name}
-                name={icon.name}
-                icon={() => icon.icon}
-                hero={icon.hero}
-                large={icon.large}
-              />
+              <div>
+                <Apps
+                  key={icon.name}
+                  name={icon.name}
+                  icon={() => icon.icon}
+                  hero={icon.hero}
+                  large={icon.large}
+                />
+              </div>
             ))}
           </div>
           <div className="osBodyRight flex flex-1 wrap">

@@ -6,6 +6,6 @@
 }
 .folderBody{
     background-color:#E5E5E5;
-    min-height: 35vh;
-
+    height: 35vh;
+    overflow-y: auto;
 }

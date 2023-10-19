@@ -44,6 +44,7 @@ code {
 @font-face{
   font-family: 'IBM Plex Mono';
   src: url(./fonts/IBMPlexMono-Regular.ttf);
+  font-display: swap;
 }
 
 @font-face{

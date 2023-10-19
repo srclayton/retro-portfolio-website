@@ -51,41 +51,50 @@ function Folder() {
             />
           ) : (
             <>
-              <Apps
-                name={currentFolder}
-                icon={() => <LiaReadme className="appImageIcon" />}
-                hero={
-                  <Description
-                    title={currentProject?.name ?? "project.title"}
-                    text={currentProject?.description ?? "project.text"}
-                    urlTitle={currentProject?.urlTitle ?? "project.urlTitle"}
-                    url={currentProject?.url ?? "project.url"}
-                    urlProducao={currentProject?.urlProducao ?? null}
-                  />
-                }
-              />
-              <Apps
-                key={"project.name"}
-                name={"src"}
-                icon={() => (
-                  <IoFolderOpenSharp color="#007ACC" className="appImageIcon" />
-                )}
-                hero={<Error />}
-              />
+              <div>
+                <Apps
+                  name={currentFolder}
+                  icon={() => <LiaReadme className="appImageIcon" />}
+                  hero={
+                    <Description
+                      title={currentProject?.name ?? "project.title"}
+                      text={currentProject?.description ?? "project.text"}
+                      urlTitle={currentProject?.urlTitle ?? "project.urlTitle"}
+                      url={currentProject?.url ?? "project.url"}
+                      urlProducao={currentProject?.urlProducao ?? null}
+                    />
+                  }
+                />
+              </div>
+              <div>
+                <Apps
+                  key={"project.name"}
+                  name={"src"}
+                  icon={() => (
+                    <IoFolderOpenSharp
+                      color="#007ACC"
+                      className="appImageIcon"
+                    />
+                  )}
+                  hero={<Error />}
+                />
+              </div>
               {currentProject?.urlProducao ? (
-                <a
-                  href={currentProject?.urlProducao}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Apps
-                    key={"project.name"}
-                    name={"PRODUCAO"}
-                    icon={() => <TbWorldWww className="appImageIcon" />}
-                    hero={<></>}
-                    isHref={true}
-                  />
-                </a>
+                <div>
+                  <a
+                    href={currentProject?.urlProducao}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Apps
+                      key={"project.name"}
+                      name={"PRODUCAO"}
+                      icon={() => <TbWorldWww className="appImageIcon" />}
+                      hero={<></>}
+                      isHref={true}
+                    />
+                  </a>
+                </div>
               ) : null}
             </>
           )}
