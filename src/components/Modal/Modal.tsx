@@ -27,7 +27,6 @@ const Modal: React.FC<IModalProps> = ({
     window.addEventListener("keydown", handleKeyPress);
   }, []);
 
-  console.log(`auto: ${auto}`);
   return (
     <div className="modal-overlay modal-enter">
       <div className="modal">

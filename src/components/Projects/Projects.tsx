@@ -2,10 +2,10 @@ import "./Projects.css";
 import { BiSolidBot } from "react-icons/bi";
 import FolderApps from "../Folder/FolderApps";
 import { ProjectProps } from "../Folder/Folder";
-import { FaGamepad, FaStore } from "react-icons/fa";
+import { FaGamepad, FaReact, FaStore } from "react-icons/fa";
 import Apps from "../Apps/Apps";
 import { BsGithub } from "react-icons/bs";
-import { SiSwagger } from "react-icons/si";
+import { SiFastify, SiSwagger } from "react-icons/si";
 interface IProjectsProps {
   setFolder: (folder: string) => void;
   setState: () => void;
@@ -14,6 +14,40 @@ interface IProjectsProps {
 function Projects(props: IProjectsProps) {
   const { setState, setFolder, setProject } = props;
   const projectsCollection: ProjectProps[] = [
+    {
+      name: "Encurtaí Backend",
+      icon: () => <SiFastify className="appImageIcon" />,
+      description: `
+      Este é o backend do projeto Encurtaí, uma aplicação de encurtamento de URLs. O backend é responsável por processar as URLs enviadas pelos usuários, gerar URLs encurtadas e redirecionar os usuários para as URLs originais quando acessam as URLs encurtadas.
+      
+      ## Funcionalidades
+      
+      - Receber URLs longas para serem encurtadas.
+      - Gerar URLs encurtadas.
+      - Redirecionar usuários para URLs originais.
+      `,
+      urlTitle: "encurtai-backend",
+      url: "https://github.com/srclayton/encurtai-backend",
+      urlProducao: "https://encurtai.me",
+    },
+    {
+      name: `Encurtaí
+      Frontend`,
+      icon: () => <FaReact color="#61dafb" className="appImageIcon" />,
+      description: `
+      Este é o frontend do projeto Encurtaí, uma aplicação de encurtamento de URLs. O frontend permite que os usuários interajam com a aplicação, inserindo URLs longas para serem encurtadas e recebendo URLs encurtadas como resultado. A aplicação oferece a opção de gerar URLs encurtadas aleatoriamente ou personalizadas pelo usuário.
+      
+      ## Funcionalidades
+      
+      - Enviar URLs longas para serem encurtadas.
+      - Receber URLs encurtadas como resultado.
+      - Opção de gerar URLs encurtadas aleatoriamente ou personalizadas.
+      - Integração com backend para processamento das URLs.
+      `,
+      urlTitle: "encurtai-frontend",
+      url: "https://github.com/srclayton/encurtai-frontend",
+      urlProducao: "https://encurtai.me",
+    },
     {
       name: "Fake Data API",
       icon: () => <SiSwagger color="#00ff00" className="appImageIcon" />,

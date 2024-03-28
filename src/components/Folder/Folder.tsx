@@ -53,7 +53,7 @@ function Folder() {
             <>
               <div>
                 <Apps
-                  name={currentFolder}
+                  name={"README.md"}
                   icon={() => <LiaReadme className="appImageIcon" />}
                   hero={
                     <Description

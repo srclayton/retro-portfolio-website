@@ -25,7 +25,6 @@ function Apps(props: IAppsProps) {
   const closeModal = () => {
     setIsModalOpen(false);
   };
-  console.log(`auto: ${props.auto}`);
   return (
     <>
       <div
