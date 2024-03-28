@@ -9,11 +9,12 @@ interface IAppsProps {
   icon: IconType;
   hero: JSX.Element;
   large?: boolean | undefined;
+  auto?: boolean | undefined;
   isHref?: boolean | undefined;
 }
 
 function Apps(props: IAppsProps) {
-  const { name, icon: Icon, hero, large, isHref } = props;
+  const { name, icon: Icon, hero, large, isHref, auto } = props;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -24,6 +25,7 @@ function Apps(props: IAppsProps) {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+  console.log(`auto: ${props.auto}`);
   return (
     <>
       <div
@@ -35,7 +37,12 @@ function Apps(props: IAppsProps) {
         </div>
         <div className="appName">{name}</div>
       </div>
-      <Modal isOpen={isModalOpen} onClose={closeModal} large={large}>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        large={large}
+        auto={auto}
+      >
         <div className="border boxShadow">
           <GenericHeader title={name} onClose={closeModal} />
           {React.cloneElement(hero, { onClose: closeModal })}

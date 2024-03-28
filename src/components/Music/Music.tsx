@@ -3,7 +3,7 @@ function Music() {
   return (
     <div className="MusicContainer ">
       <iframe
-        src="https://open.spotify.com/embed/album/5TG8nNzWlr4lsL6XBURDs0?utm_source=generator&theme=0"
+        src="https://open.spotify.com/embed/track/4EBqxBv4U2qro1UoBXtGhG?utm_source=generator&theme=0"
         width="100%"
         height="352"
         frameBorder="0"

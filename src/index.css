@@ -80,6 +80,9 @@ code {
 .gap-3{
   gap: 0.9rem;
 }
+.gap-4{
+  gap: 1.2rem;
+}
 .red{
   background-color: red;
 }

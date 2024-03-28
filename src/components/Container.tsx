@@ -6,6 +6,7 @@ import Error from "./Apps/Error";
 import { TbBrandVscode } from "react-icons/tb";
 import { SiNotion } from "react-icons/si";
 import { IoFolderOpenSharp } from "react-icons/io5";
+import { PiCertificateDuotone } from "react-icons/pi";
 import Development from "./Development/Development";
 import { AiFillMail } from "react-icons/ai";
 import Form from "./Email/Form";
@@ -14,6 +15,7 @@ import { BsSpotify } from "react-icons/bs";
 import VsCode from "./VsCode/VsCode";
 import Folder from "./Folder/Folder";
 import Technologies from "./Technologies/Technologies";
+import Certifications from "./Certifications/Certifications";
 function Container() {
   const icons = [
     {
@@ -26,6 +28,7 @@ function Container() {
       name: "Spotify",
       icon: <BsSpotify color="green" className="appImageIcon" />,
       hero: <Music />,
+      auto: true,
     },
     {
       name: "Notion",
@@ -41,6 +44,13 @@ function Container() {
       name: "Email",
       icon: <AiFillMail color="#2c80b7" className="appImageIcon" />,
       hero: <Form />,
+      auto: true,
+    },
+    {
+      name: "Certificados",
+      icon: <PiCertificateDuotone color="#007ACC" className="appImageIcon" />,
+      hero: <Certifications />,
+      auto: true,
     },
   ];
 
@@ -66,6 +76,7 @@ function Container() {
                   icon={() => icon.icon}
                   hero={icon.hero}
                   large={icon.large}
+                  auto={icon.auto}
                 />
               </div>
             ))}

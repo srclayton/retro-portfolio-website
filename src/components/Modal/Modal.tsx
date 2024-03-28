@@ -4,10 +4,17 @@ interface IModalProps {
   isOpen: boolean;
   children: ReactNode;
   large?: boolean | undefined;
+  auto?: boolean | undefined;
   onClose: () => void;
 }
 
-const Modal: React.FC<IModalProps> = ({ isOpen, children, large, onClose }) => {
+const Modal: React.FC<IModalProps> = ({
+  isOpen,
+  children,
+  large,
+  auto,
+  onClose,
+}) => {
   if (!isOpen) return null;
   const handleKeyPress = (event: KeyboardEvent) => {
     if (event.key === "Escape") {
@@ -19,10 +26,14 @@ const Modal: React.FC<IModalProps> = ({ isOpen, children, large, onClose }) => {
   useEffect(() => {
     window.addEventListener("keydown", handleKeyPress);
   }, []);
+
+  console.log(`auto: ${auto}`);
   return (
     <div className="modal-overlay modal-enter">
       <div className="modal">
-        {large ? (
+        {auto ? (
+          <div>{children}</div>
+        ) : large ? (
           <div className="modal-content-95">{children}</div>
         ) : (
           <div className="modal-content">{children}</div>
